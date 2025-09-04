@@ -22,7 +22,7 @@ Build-Depends:
  python3-trio <!nocheck>,
  python3-trustme <!nocheck>,
  python3-yarl <!nocheck>,
-Standards-Version: 4.6.2
+Standards-Version: 4.7.2
 Testsuite: autopkgtest-pkg-python
 Homepage: https://github.com/romis2012/python-socks
 Vcs-Git: https://salsa.debian.org/python-team/packages/python-socks.git
