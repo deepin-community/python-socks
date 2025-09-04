@@ -1,15 +1,37 @@
-Source: template-repository
-Section: unknown
+Source: python-socks
+Section: python
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Uploaders: Piotr Ożarowski <piotr@debian.org>,
+Build-Depends:
+ debhelper-compat (= 13),
+ dh-sequence-python3,
+ python3-all,
+ pybuild-plugin-pyproject,
+ python3-anyio <!nocheck>,
+ python3-async-timeout <!nocheck>,
+ python3-flask <!nocheck>,
+ python3-pytest <!nocheck>,
+ python3-pytest-asyncio <!nocheck>,
+ python3-pytest-cov <!nocheck>,
+ python3-pytest-tornasync <!nocheck>,
+ python3-pytest-trio <!nocheck>,
+ python3-pytest-twisted <!nocheck>,
+ python3-setuptools,
+ python3-tiny-proxy <!nocheck>,
+ python3-trio <!nocheck>,
+ python3-trustme <!nocheck>,
+ python3-yarl <!nocheck>,
+Standards-Version: 4.7.2
+Testsuite: autopkgtest-pkg-python
+Homepage: https://github.com/romis2012/python-socks
+Vcs-Git: https://salsa.debian.org/python-team/packages/python-socks.git
+Vcs-Browser: https://salsa.debian.org/python-team/packages/python-socks
+Rules-Requires-Root: no
 
-Package: template-repository
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Package: python3-python-socks
+Architecture: all
+Depends: ${misc:Depends}, ${python3:Depends},
+Description: core proxy (SOCKS4, SOCKS5, HTTP tunneling) functionality for Python
+ Supports SOCKS4(a), SOCKS5, HTTP (tunneling) proxy and provides sync and async
+ (asyncio, trio, curio, anyio) APIs.
